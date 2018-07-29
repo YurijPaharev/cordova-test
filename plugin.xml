@@ -1,0 +1,39 @@
+<!-- Describes plugin structure,
+    the connection between the files
+    and the plugin installation process -->
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-device" version="0.0.1">
+    <name>Device</name>
+    <description>Cordova Sensor Manager Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,device,sensors</keywords>
+
+    <!-- js file which will be the bridge to the native code  -->
+    <!-- the src attribute is the path of the js file -->
+    <js-module src="www/sensorManager.js" name="AndroidSensorManager">
+      <!-- the clobbers target is the json path where our module will be added to the window object -->
+      <clobbers target="device" />
+    </js-module>
+
+    <!-- the minimum cordova version which supports this plugin -->
+    <engines>
+      <engine name="cordova" version=">=3.6.0"></engine>
+    </engines>
+
+    <!-- details of our Android related files -->
+    <platform name="android">
+      <!-- source-file is where our java file takes place in the plugin -->
+      <!-- target-dir is the path where this file will be copied when you install this plugin -->
+      <source-file src="src/android/AndroidSensorManager.java" target-dir="src/org/apache/cordova/sensormanager" />
+
+      <config-file parent="/*" target="res/xml/config.xml">
+        <!-- the feature describes the Java class which we want to use -->
+        <feature name="AndroidSensorManager">
+          <!-- the value is the class path where this class can be found -->
+          <param name="android-package" value="org.apache.cordova.sensormanager.AndroidSensorManager" />
+        </feature>
+      </config-file>
+    </platform>
+
+</plugin>
