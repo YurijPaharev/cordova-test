@@ -13,7 +13,7 @@
     <!-- the src attribute is the path of the js file -->
     <js-module src="www/sensorManager.js" name="AndroidSensorManager">
       <!-- the clobbers target is the json path where our module will be added to the window object -->
-      <clobbers target="device" />
+      <clobbers target="cordova.plugins.sensorManager" />
     </js-module>
 
     <!-- the minimum cordova version which supports this plugin -->
