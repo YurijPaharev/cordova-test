@@ -1,0 +1,1 @@
+Simple test version of plugin to test build capabilities of the app
