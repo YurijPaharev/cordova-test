@@ -1,4 +1,4 @@
-package android;
+package org.apache.cordova.sensormanager;
 // Need to check the above one
 
 import org.apache.cordova.CallbackContext;
