@@ -3,7 +3,7 @@
     and the plugin installation process -->
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="cordova-plugin-device" version="0.0.1">
+        id="cordova-plugin-test-sensor" version="0.0.1">
     <name>Device</name>
     <description>Cordova Sensor Manager Plugin</description>
     <license>MIT</license>
